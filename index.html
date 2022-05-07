@@ -3,13 +3,25 @@
 
 <head>
 <title>Test</title>
+  
+  <script>
+		function test(){
+		xhttp.onload = function() {
+		document.getElementById("demo").innerHTML = this.responseText;
+    }
+		xhttp.open("GET", "ajax_info.txt");
+		xhttp.send();
+		}
+  </script>
+  
 </head>
 
-<body>
+<body onload="test()">
 <h1>Test</h1>
 <h2>Test</h2>
 <h3>Test</h3>
 <h4>Test</h4>
+	<p id="demo">ITSATEST</p>
 </body>
 
 </html>
